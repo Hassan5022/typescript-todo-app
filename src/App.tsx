@@ -6,6 +6,7 @@ import InputForm from "./components/InputForm";
 import "./App.css";
 // model
 import { Todo } from "./models/model";
+import TodoList from "./components/TodoList";
 
 const App: React.FC = () => {
 	const [todo, setTodo] = useState<string>("");
@@ -13,13 +14,17 @@ const App: React.FC = () => {
 
 	const handleSubmit = (e: React.FormEvent) => {
 		e.preventDefault();
-		console.log("object");
+		if (todos) {
+			setTodos([...todos, { id: Date.now(), todo, isDone: false }]);
+			setTodo("");
+		}
 	};
 
 	return (
 		<div className="App">
 			<span className="heading">Todo List</span>
 			<InputForm todo={todo} setTodo={setTodo} handleSubmit={handleSubmit} />
+			<TodoList todos={todos} setTodos={setTodos} />
 		</div>
 	);
 };

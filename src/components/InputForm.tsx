@@ -1,3 +1,5 @@
+// hook
+import { useRef } from "react";
 // style
 import "./style.css";
 
@@ -8,10 +10,19 @@ interface Props {
 }
 
 const InputForm = ({ todo, setTodo, handleSubmit }: Props) => {
+	const inputRef = useRef<HTMLInputElement>(null);
+
 	return (
-		<form className="input-form" onSubmit={handleSubmit}>
+		<form
+			className="input-form"
+			onSubmit={(e) => {
+				handleSubmit(e);
+				inputRef.current?.blur();
+			}}
+		>
 			<input
 				type="text"
+				ref={inputRef}
 				value={todo}
 				onChange={(e) => setTodo(e.target.value)}
 				placeholder="Enter a task"
