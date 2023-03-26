@@ -2,11 +2,11 @@
 import { useState } from "react";
 // component
 import InputForm from "./components/InputForm";
+import TodoList from "./components/TodoList";
 // style
 import "./App.css";
 // model
 import { Todo } from "./models/model";
-import TodoList from "./components/TodoList";
 
 const App: React.FC = () => {
 	const [todo, setTodo] = useState<string>("");
@@ -14,7 +14,7 @@ const App: React.FC = () => {
 
 	const handleSubmit = (e: React.FormEvent) => {
 		e.preventDefault();
-		if (todos) {
+		if (todos && todo !== "") {
 			setTodos([...todos, { id: Date.now(), todo, isDone: false }]);
 			setTodo("");
 		}
