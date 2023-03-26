@@ -49,3 +49,42 @@
     width: 90%;
     flex-wrap: wrap;
 }
+
+.single-todo{
+    display: flex;
+    width: 48%;
+    border-radius: 5px;
+    padding: 20px;
+    margin-top: 15px;
+    background-image: url('../assets/bg.avif');
+}
+
+.single-todo .single-todo-text{
+    flex: 1;
+    padding: 5px;
+    border: none;
+    font-size: 20px;
+}
+
+.single-todo .icon{
+    margin-left: 10px;
+    font-size: 25px;
+    cursor: pointer;
+}
+
+@media screen and (max-width:1200px) {
+    .single-todo{
+        width: 58%;
+    }
+}
+
+@media screen and (max-width:700px) {
+    .input-form,
+    .todos{
+        width: 95%;
+    }
+
+    .single-todo{
+        width: 100%;
+    }
+}
