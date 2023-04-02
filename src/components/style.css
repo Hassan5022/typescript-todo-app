@@ -1,6 +1,6 @@
 .input-form {
 	display: flex;
-	width: 90%;
+	width: 95%;
 	position: relative;
 	align-items: center;
 }
@@ -43,20 +43,40 @@
 	box-shadow: 0 0 5px black;
 }
 
+.container{
+	display: flex;
+	width: 95%;
+	align-items: flex-start;
+	margin-top: 10px;
+	justify-content: space-between;
+}
+
 .todos {
 	display: flex;
-	justify-content: space-evenly;
-	width: 90%;
-	flex-wrap: wrap;
+	flex-direction: column;
+	width: 47.5%;
+	border-radius: 5px;
+	padding: 15px;
+	background-color: rgb(50, 195, 205);
+}
+
+.todo-heading{
+	font-size: 30px;
+	color: white;
 }
 
 .single-todo {
 	display: flex;
-	width: 48%;
 	border-radius: 5px;
 	padding: 20px;
 	margin-top: 15px;
 	background-image: url("../assets/bg.avif");
+	transition: 0.2s;
+}
+
+.single-todo:hover{
+	box-shadow: 0 0 5px black;
+	transform: scale(1.03);
 }
 
 .single-todo .single-todo-text {
@@ -72,19 +92,28 @@
 	cursor: pointer;
 }
 
-@media screen and (max-width: 1200px) {
-	.single-todo {
-		width: 58%;
+@media screen and (max-width: 1100px) {
+	.todos {
+		width: 45%;
 	}
 }
 
-@media screen and (max-width: 700px) {
-	.input-form,
-	.todos {
+@media (max-width: 700px) {
+	.input-form{
 		width: 95%;
 	}
 
-	.single-todo {
+	.todos {
 		width: 100%;
+		margin-bottom: 10px;
 	}
+
+	.container{
+		width: 95%;
+		flex-direction: column;
+	}
+}
+
+.remove{
+	background-color: rgb(235, 103, 80);
 }
