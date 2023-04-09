@@ -7,3 +7,18 @@
 	outline: none;
 	font-family: "Poppins", sans-serif;
 }
+
+body {
+	scrollbar-width: thin;
+	overflow-x: hidden;
+}
+
+::-webkit-scrollbar {
+	height: 12px;
+	width: 6px;
+	background: #000;
+}
+
+::-webkit-scrollbar-thumb {
+	background: #ff9346;
+}

@@ -24,7 +24,7 @@ const TodoList = ({
 			<Droppable droppableId="TodoList">
 				{(provided, snapshot) => (
 					<div
-						className={`todos ${snapshot.isDraggingOver ? 'drag-active' : ''}`}
+						className={`todos ${snapshot.isDraggingOver ? "drag-active" : ""}`}
 						ref={provided.innerRef}
 						{...provided.droppableProps}
 					>
@@ -45,14 +45,16 @@ const TodoList = ({
 			<Droppable droppableId="TodosRemove">
 				{(provided, snapshot) => (
 					<div
-						className={`todos remove ${snapshot.isDraggingOver ? 'drag-complete' : ''}`}
+						className={`todos remove ${
+							snapshot.isDraggingOver ? "drag-complete" : ""
+						}`}
 						ref={provided.innerRef}
 						{...provided.droppableProps}
 					>
 						<span className="todo-heading">Completed Tasks</span>
 						{completedTodos.map((todo, index) => (
 							<SingleTodo
-							index={index}
+								index={index}
 								key={todo.id}
 								todo={todo}
 								todos={completedTodos}

@@ -44,7 +44,7 @@
 	box-shadow: 0 0 5px black;
 }
 
-.container{
+.container {
 	display: flex;
 	width: 95%;
 	align-items: flex-start;
@@ -61,7 +61,7 @@
 	background-color: rgb(50, 195, 205);
 }
 
-.todo-heading{
+.todo-heading {
 	font-size: 30px;
 	color: white;
 }
@@ -75,7 +75,7 @@
 	transition: 0.2s;
 }
 
-.single-todo:hover{
+.single-todo:hover {
 	box-shadow: 0 0 5px black;
 	transform: scale(1.03);
 }
@@ -100,7 +100,7 @@
 }
 
 @media (max-width: 700px) {
-	.input-form{
+	.input-form {
 		width: 95%;
 	}
 
@@ -109,24 +109,24 @@
 		margin-bottom: 10px;
 	}
 
-	.container{
+	.container {
 		width: 95%;
 		flex-direction: column;
 	}
 }
 
-.remove{
+.remove {
 	background-color: rgb(235, 103, 80);
 }
 
-.drag-active{
-	background-color: rgb(0 173 185);	
+.drag-active {
+	background-color: rgb(0 173 185);
 }
 
-.drag-complete{
-	background-color: rgb(243 54 22);	
-}	
+.drag-complete {
+	background-color: rgb(243 54 22);
+}
 
-.drag{
+.drag {
 	box-shadow: 0 0 20px black;
 }

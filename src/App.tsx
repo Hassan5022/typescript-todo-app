@@ -49,8 +49,8 @@ const App: React.FC = () => {
 			completed.splice(source.index, 0, add);
 		}
 
-		setCompletedTodos(completed)
-		setTodos(active)
+		setCompletedTodos(completed);
+		setTodos(active);
 	};
 
 	return (
