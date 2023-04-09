@@ -36,6 +36,7 @@
 
 .input-form .input-button:hover {
 	background-color: rgb(239, 103, 5);
+	cursor: pointer;
 }
 
 .input-form .input-button:active {
@@ -116,4 +117,16 @@
 
 .remove{
 	background-color: rgb(235, 103, 80);
+}
+
+.drag-active{
+	background-color: rgb(0 173 185);	
+}
+
+.drag-complete{
+	background-color: rgb(243 54 22);	
+}	
+
+.drag{
+	box-shadow: 0 0 20px black;
 }
